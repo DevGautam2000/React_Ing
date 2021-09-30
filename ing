@@ -92,6 +92,6 @@ then
         fi
     fi
 else
-   echo "This directory does not conatain a react project"
+   echo "This directory does not contain a react project"
 fi
 
