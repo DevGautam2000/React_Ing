@@ -1,11 +1,6 @@
-# React-Ing
+# Usage
 
-A cli for react projects to generate folder structures
-
-- [Installation](https://github.com/DevGautam2000/React_Ing/blob/master/installation.md)
-- [Uage](https://github.com/DevGautam2000/React_Ing/blob/master/usage.md)
-
-## Examples
+inside a react project
 
 ### to generate all files (.js and .css)
 
@@ -61,6 +56,64 @@ function Mycomponent() {
 export default Mycomponent;
 ```
 
+## to omit the boiler plate from being generated
+
+### add -o flag at end
+
+```bash
+    ing gen -a <component-name> -o        //for normal css files
+
+     e.g., ing gen -a component -o
+```
+
+```bash
+    ing -a <component-name> -m -o     //for css module files
+
+    e.g., ing gen -a component -m -o
+```
+
+## to generate a component file only (.js)
+
+```bash
+    ing gen -c <component-name>
+
+    e.g., ing gen -c component
+```
+
+## to generate a style sheet only (.css)
+
+### for css module file
+
+```bash
+    ing gen -s <name> -m
+
+    e.g., ing gen -s home -m
+```
+
+### for normal css file
+
+```bash
+    ing gen -s <name>
+
+     e.g., ing gen -s home
+```
+
+## to generate a screen only (.js in src/screens)
+
+```bash
+    ing gen -scr <screen-name>
+
+    e.g., ing gen -scr home
+```
+
+## to generate a custom file in a custom directory (into src/)
+
+```bash
+    ing gen <path-to-dir> <file-name-with-extension>
+
+    e.g., ing gen one/two/three numbers.js
+```
+
 ## 🔗 Links
 
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://inginer.me/)
@@ -80,7 +133,3 @@ export default Mycomponent;
 ## Support
 
 For support, email devgautam1231@icloud.com or create an issue.
-
-#### Note
-
-- The code is open source so do not hesitate to make it better
