@@ -1,0 +1,33 @@
+
+stname=$(echo "$ufile" | tr '[:upper:]' '[:lower:]')
+
+STR="$file"
+SUB="module"
+if [[ "$STR" == *"$SUB"* ]]
+then
+  echo "import React from 'react'
+import style from '../css/$file.css'
+
+function $ufile(){
+    return (
+        <div className={style.$stname}>
+             $stname works!
+        </div>
+    )
+}
+
+export default $ufile" > $PWD/src/components/$ufile.js
+else
+  echo "import React from 'react'
+import '../css/$file.css'
+
+function $ufile(){
+    return (
+        <div className=\""$stname"__main\">
+            $stname works!
+        </div>
+    )
+}
+
+export default $ufile" > $PWD/src/components/$ufile.js
+fi
