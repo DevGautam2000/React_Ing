@@ -2,120 +2,127 @@
 
 A cli for react projects to generate folder structures
 
+## For Installation click [here](https://github.com/DevGautam2000/React_Ing/blob/master/usage.md)
+
+# Usage
+
+inside a react project
+
+### to generate all files (.js and .css)
+
+into the root of the react project
+
+```bash
+    ing gen -a <replace-with-component-name>
+
+    e.g,
+    ing gen -a mycomponent
+```
+
+this generates Mycomponent.js into src/components
+and mycomponent.css into src/css
+
+### to generate all files (.js and .module.css)
+
+```bash
+    ing gen -a <replace-with-component-name> -m
+
+    e.g,
+    ing gen -a mycomponent -m
+```
+
+this generates Mycomponent.js into src/components
+and mycomponent.module.css into src/css
+
+## both commands above will create a Mycomponent.js file with this boiler plate
+
+### with -m flag for css module files
+
+```javascript
+import React from "react";
+import style from "../css/mycomponent.module.css";
+
+function Mycomponent() {
+  return <div className={style.mycomponent}></div>;
+}
+
+export default Mycomponent;
+```
+
+### without -m flag
+
+```javascript
+import React from "react";
+import "../css/mycomponent.css";
+
+function Mycomponent() {
+  return <div className="mycomponent__main"></div>;
+}
+
+export default Mycomponent;
+```
+
+## to omit the boiler plate from being generated
+
+### add -o flag at end
+
+```bash
+    ing gen -a <component-name> -o        //for normal css files
+
+     e.g., ing gen -a component -o
+```
+
+```bash
+    ing -a <component-name> -m -o     //for css module files
+
+    e.g., ing gen -a component -m -o
+```
+
+## to generate a component file only (.js)
+
+```bash
+    ing gen -c <component-name>
+
+    e.g., ing gen -c component
+```
+
+## to generate a style sheet only (.css)
+
+### for css module file
+
+```bash
+    ing gen -s <name> -m
+
+    e.g., ing gen -s home -m
+```
+
+### for normal css file
+
+```bash
+    ing gen -s <name>
+
+     e.g., ing gen -s home
+```
+
+## to generate a screen only (.js in src/screens)
+
+```bash
+    ing gen -scr <screen-name>
+
+    e.g., ing gen -scr home
+```
+
+## to generate a custom file in a custom directory (into src/)
+
+```bash
+    ing gen <path-to-dir> <file-name-with-extension>
+
+    e.g., ing gen one/two/three numbers.js
+```
+
 ## Authors
 
 - [@devgautam2000](https://www.github.com/devgautam2000)
-
-## For Usage click [here](https://github.com/DevGautam2000/React_Ing/blob/master/usage.md)
-
-## Installation
-
-Install ing
-
-```text
-    Download the code zip or clone the repo React-Ing
-    cd React-Ing
-```
-
-run ing
-
-```bash
-    ./ing -v
-```
-
-shows the version if file has permissions
-
-```text
-    ing v1.0.3
-```
-
-if the above output is achieved
-
-On Unix or Linux
-
-```bash
-    navigate to usr/local/bin as super user
-```
-
-for super user
-
-```bash
-    sudo su
-    "and then enter your root password"
-```
-
-onto that folder paste the files ing and react-bp from the folder downloded or cloned
-use ls to check if the files are present at usr/local/bin
-
-```bash
-    ls
-```
-
-On windows
-
-NOTE : THIS WILL SUPPORT ON WINDOWS IF YOUR SYSTEM HAS
-SUPPORT FOR WSL(Windows Subsytem for Linux).
-A BASH TERMINAL IS NECCESSARY(e.g, GIT BASH)
-
-```text
-    navigate to C:/Users/
-
-    make a folder react-ing by right click new folder
-
-    again make a folder bin inside of react-ing
-```
-
-```cmd
-    cd react-ing/bin
-```
-
-paste the ing and react-bp files over here
-
-Then follow these steps
-
-```text
-
-    1. copy the location of the folder bin from
-       the location bar in file manager or pwd from bash
-
-    2. from start menu search for environment variables
-       click on edit envirinment variables and into user variables
-       search the path key and choose/click edit
-
-    3. in the pop up that appears add the location copied after the
-       last key over there
-
-    4. save the settings
-
-    5. restart system once for better results
-
-```
-
-After successful copying of the files to the respective folders
-
-open terminal/git bash on Unix or Linux/ Windows
-
-and type
-
-```bash
-    ing -v
-```
-
-output
-
-```bash
-    ing v1.0.3
-```
-
-## Hurray! you have successfully installed react-Ing
-
-## 🔗 Links
-
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://inginer.me/)
-
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gautam-chandra-saha-896735205/)
-
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/gautam1200)
 
 ## License
 
