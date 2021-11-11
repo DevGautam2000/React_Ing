@@ -6,6 +6,8 @@ A cli for react projects to generate folder structures
 
 - [@devgautam2000](https://www.github.com/devgautam2000)
 
+## For Usage click [here](https://github.com/DevGautam2000/React_Ing/blob/master/usage.md)
+
 ## Installation
 
 Install ing
