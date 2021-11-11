@@ -3,7 +3,7 @@
 A cli for react projects to generate folder structures
 
 - [Installation](https://github.com/DevGautam2000/React_Ing/blob/master/installation.md)
-- [Uage](https://github.com/DevGautam2000/React_Ing/blob/master/usage.md)
+- [Usage](https://github.com/DevGautam2000/React_Ing/blob/master/usage.md)
 
 ## Examples
 
