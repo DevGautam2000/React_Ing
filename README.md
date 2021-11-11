@@ -84,3 +84,4 @@ For support, email devgautam1231@icloud.com or create an issue.
 #### Note
 
 - The code is open source so do not hesitate to make it better
+- Thank you and keep coding!
