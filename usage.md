@@ -37,7 +37,10 @@ import React from "react";
 import style from "../css/mycomponent.module.css";
 
 function Mycomponent() {
-  return <div className={style.mycomponent}></div>;
+  return <div className={style.mycomponent}>
+  
+    mycomponent works!
+  </div>;
 }
 
 export default Mycomponent;
@@ -50,7 +53,10 @@ import React from "react";
 import "../css/mycomponent.css";
 
 function Mycomponent() {
-  return <div className="mycomponent__main"></div>;
+  return <div className="mycomponent__main">
+  
+     mycomponent works!
+  </div>;
 }
 
 export default Mycomponent;

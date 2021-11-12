@@ -45,7 +45,7 @@ On windows
 
 NOTE : THIS WILL SUPPORT ON WINDOWS IF YOUR SYSTEM HAS
 SUPPORT FOR WSL(Windows Subsytem for Linux).
-A BASH TERMINAL IS NECCESSARY(e.g, GIT BASH)
+A BASH TERMINAL IS NECESSARY(e.g, GIT BASH)
 
 ```text
     navigate to C:/Users/
