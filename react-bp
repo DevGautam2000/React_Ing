@@ -7,7 +7,7 @@ SUB="module"
 if [[ "$STR" == *"$SUB"* ]]
 then
   echo "import React from 'react'
-import style from '../css/$file.css'
+import style from '../styles/$file.css'
 
 function $ufile(){
     return (
@@ -17,10 +17,13 @@ function $ufile(){
     )
 }
 
-export default $ufile" > $PWD/src/components/$ufile.js
+    
+export default $ufile" > $PWD/src/$dirname/$ufile.js
+
+echo ".$stname{}" > $PWD/src/styles/$file.css
 else
   echo "import React from 'react'
-import '../css/$file.css'
+import '../styles/$file.css'
 
 function $ufile(){
     return (
@@ -30,5 +33,8 @@ function $ufile(){
     )
 }
 
-export default $ufile" > $PWD/src/components/$ufile.js
+export default $ufile" > $PWD/src/$dirname/$ufile.js
+
+    echo ".$stname{}" > $PWD/src/styles/$file.css
 fi
+

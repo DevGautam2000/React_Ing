@@ -3,17 +3,18 @@
 : "
           AUTHOR : GAUTAM CHANDRA SAHA
           DATE & TIME: Thu, November 11,2021 AT 22:03 
-          @COPYRIGHT: GAUTAM CHANDRA SAHA
+          DESCRIPTION:
 
 "
 
 
 file=""
 ufile=""
+dirname=""
 VERSION=v1.0.3
 
 function exp(){
-    export ufile file 
+    export ufile file dirname
         react-bp
 }
 function check(){
@@ -41,45 +42,58 @@ then
 elif [ -f $PWD/src/index.js ]
 then
 
-    if [ "$2" == "-a" ]
+    if [[ "$2" == "-sc" || "$2" == "-p" ]]
     then
         file=$3
+        dirname="screens"
         ufile=$(tr '[:lower:]' '[:upper:]' <<< ${file:0:1})${file:1}
-        check "components" "$ufile" "js"
+        check "screens" "$ufile" "js"
 
         if [ "$4" == "-m" ]
         then
                 file=$3.module
-                check "css" "$3" "module.css"
+                check "styles" "$3" "module.css"
         else
-                check "css" "$3" "css"
+                check "styles" "$3" "css"
         fi
         if [[ -z $5 && -z $4 ]] || [[ -z $5 && $4 == "-m" ]]
         then
             exp
         fi
         
-    elif [ "$1" == "gen" ]
+    elif [[ "$1" == "g" || "$1" == "gen" ]]
     then
         if [ "$2" == "-c" ]
         then
             file=$3
+            dirname="components"
             ufile=$(tr '[:lower:]' '[:upper:]' <<< ${file:0:1})${file:1}
             check "components" "$ufile" "js"
+            if [ "$4" == "-m" ]
+            then
+                    file=$3.module
+                    check "styles" "$3" "module.css"
+            else
+                    check "styles" "$3" "css"
+            fi
+            if [[ -z $5 && -z $4 ]] || [[ -z $5 && $4 == "-m" ]]
+            then
+                exp
+            fi
             
         elif [ "$2" == "-s" ]
         then
             if [ "$4" == "-m" ]
             then
-                check "css" "$3" "module.css"
+                check "styles" "$3" "module.css"
             else
-                check "css" "$3" "css"
+                check "styles" "$3" "css"
             fi
            
-        elif [ "$2" == "-scr" ]
-        then
-            scrUFile=$(tr '[:lower:]' '[:upper:]' <<< ${3:0:1})${3:1}
-            check "screens" "$scrUFile" "js"
+        # elif [ "$2" == "-scr" ]
+        # then
+        #     scrUFile=$(tr '[:lower:]' '[:upper:]' <<< ${3:0:1})${3:1}
+        #     check "screens" "$scrUFile" "js"
 
         else
             if [ -d $PWD/src/$2 ]

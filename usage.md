@@ -2,27 +2,27 @@
 
 inside a react project
 
-### to generate all files (.js and .css)
+### to generate components (.js and .css)
 
 into the root of the react project
 
 ```bash
-    ing gen -a <replace-with-component-name>
+    ing g -c <replace-with-component-name>
 
     e.g,
-    ing gen -a mycomponent
+    ing g -c mycomponent
 ```
 
 this generates Mycomponent.js into src/components
 and mycomponent.css into src/css
 
-### to generate all files (.js and .module.css)
+### to generate components (.js and .module.css)
 
 ```bash
-    ing gen -a <replace-with-component-name> -m
+    ing g -c <replace-with-component-name> -m
 
     e.g,
-    ing gen -a mycomponent -m
+    ing g -c mycomponent -m
 ```
 
 this generates Mycomponent.js into src/components
@@ -37,10 +37,7 @@ import React from "react";
 import style from "../css/mycomponent.module.css";
 
 function Mycomponent() {
-  return <div className={style.mycomponent}>
-  
-    mycomponent works!
-  </div>;
+  return <div className={style.mycomponent}>mycomponent works!</div>;
 }
 
 export default Mycomponent;
@@ -53,10 +50,7 @@ import React from "react";
 import "../css/mycomponent.css";
 
 function Mycomponent() {
-  return <div className="mycomponent__main">
-  
-     mycomponent works!
-  </div>;
+  return <div className="mycomponent__main">mycomponent works!</div>;
 }
 
 export default Mycomponent;
@@ -67,23 +61,15 @@ export default Mycomponent;
 ### add -o flag at end
 
 ```bash
-    ing gen -a <component-name> -o        //for normal css files
+    ing g -c <component-name> -o        //for normal css files
 
-     e.g., ing gen -a component -o
+     e.g., ing g -c component -o
 ```
 
 ```bash
-    ing -a <component-name> -m -o     //for css module files
+    ing -c <component-name> -m -o     //for css module files
 
-    e.g., ing gen -a component -m -o
-```
-
-## to generate a component file only (.js)
-
-```bash
-    ing gen -c <component-name>
-
-    e.g., ing gen -c component
+    e.g., ing g -c component -m -o
 ```
 
 ## to generate a style sheet only (.css)
@@ -91,33 +77,35 @@ export default Mycomponent;
 ### for css module file
 
 ```bash
-    ing gen -s <name> -m
+    ing g -s <name> -m
 
-    e.g., ing gen -s home -m
+    e.g., ing g -s home -m
 ```
 
 ### for normal css file
 
 ```bash
-    ing gen -s <name>
+    ing g -s <name>
 
-     e.g., ing gen -s home
+     e.g., ing g -s home
 ```
 
-## to generate a screen only (.js in src/screens)
+## to generate a screen with boiler plate(.js in src/screens)
 
 ```bash
-    ing gen -scr <screen-name>
+    ing g -sc <screen-name>
 
-    e.g., ing gen -scr home
+    e.g., ing g -sc home
 ```
+
+##### for generating screens/pages use -sc or -p flag follwed by name
 
 ## to generate a custom file in a custom directory (into src/)
 
 ```bash
-    ing gen <path-to-dir> <file-name-with-extension>
+    ing g <path-to-dir> <file-name-with-extension>
 
-    e.g., ing gen one/two/three numbers.js
+    e.g., ing g one/two/three numbers.js
 ```
 
 ## 🔗 Links
